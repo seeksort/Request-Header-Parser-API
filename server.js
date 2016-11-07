@@ -5,7 +5,7 @@ var
     accepts = require('accepts'),
     uaParser = require('ua-parser');
 
-var PORT = process.env.port || 3000;
+var PORT = process.env.PORT || 3000;
 var server = http.createServer(serverHandler);
 
 function serverHandler(req, res) {
