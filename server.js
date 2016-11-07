@@ -24,7 +24,7 @@ function serverHandler(req, res) {
     // Route - /api/whoami
     else if (urlParts.pathname === '/api/whoami') {
         var respObj = {
-            ipaddress: req.headers.host,
+            ipaddress: req.headers['x-forwarded-for'],
             language: accepts(req).languages()[0],
             software: uaParser.parseOS(userAgent).toString()
         };
